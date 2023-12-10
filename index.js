@@ -18,3 +18,11 @@ app.use(cors({
 app.use(express.json());
 // app.use(express.json());
 app.use(cookieParser())
+
+app.get('/', (req, res) => {
+    res.send(`nfridoy-portfolio server is running on port ${port}`)
+})
+
+app.listen(port, () => {
+    console.log(`nfridoy-portfolio server is listening on port ${port} Thank you!`)
+})
